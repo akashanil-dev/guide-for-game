@@ -1,5 +1,3 @@
-Here is the updated guide with **Command Prompt** instructions and the requested file creation command.
-
 # **Know Your Distro – Docker Setup Guide**
 
 This guide explains how to run the **Know Your Distro** game using Docker.
