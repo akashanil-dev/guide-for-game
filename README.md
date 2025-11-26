@@ -1,53 +1,54 @@
+Here is the updated guide with **Command Prompt** instructions and the requested file creation command.
+
 # **Know Your Distro – Docker Setup Guide**
 
 This guide explains how to run the **Know Your Distro** game using Docker.
 
----
+-----
 
 ## **Step 0: Get the Game Files**
 
 ### **Option A — Clone the Repository**
 
-```bash
+```cmd
 git clone https://github.com/akashanil-dev/know-your-distro
 cd know-your-distro
 ```
 
 ### **Option B — Download ZIP**
 
-Download the ZIP directly:
-[https://github.com/akashanil-dev/know-your-distro/archive/refs/heads/master.zip](https://github.com/akashanil-dev/know-your-distro/archive/refs/heads/master.zip)
+Download the ZIP directly: [https://github.com/akashanil-dev/know-your-distro/archive/refs/heads/master.zip](https://github.com/akashanil-dev/know-your-distro/archive/refs/heads/master.zip)
 
 Extract the ZIP and open the folder.
 
----
+-----
 
-## **Step 1: Open Terminal**
+## **Step 1: Open Command Prompt**
 
-Open **PowerShell** or **Command Prompt** and navigate to the project folder.
+Open **Command Prompt** and navigate to the project folder.
 
 Example:
 
-```powershell
+```cmd
 cd C:\Users\YourName\Downloads\know-your-distro
 ```
 
 You should see `index.html` when running:
 
-```powershell
-ls
+```cmd
+dir
 ```
 
----
+-----
 
 ## **Step 2: Create the Dockerfile**
 
 Create a file named **Dockerfile** (no extension).
 
-PowerShell:
+Command Prompt:
 
-```powershell
-New-Item Dockerfile -type file
+```cmd
+type nul > Dockerfile
 ```
 
 Open the file in Notepad or VS Code and paste the following:
@@ -65,27 +66,27 @@ EXPOSE 80
 
 Save the file.
 
----
+-----
 
 ## **Step 3: Build the Docker Image**
 
 Build the Docker image using:
 
-```powershell
+```cmd
 docker build -t linux-runner-game .
 ```
 
----
+-----
 
 ## **Step 4: Run the Container**
 
 Start the container:
 
-```powershell
+```cmd
 docker run -d -p 8080:80 --name my-game linux-runner-game
 ```
 
----
+-----
 
 ## **Step 5: Play the Game**
 
@@ -95,26 +96,26 @@ Open your web browser and visit:
 http://localhost:8080
 ```
 
----
+-----
 
 ## **Useful Commands**
 
 Stop the container:
 
-```powershell
+```cmd
 docker stop my-game
 ```
 
 Remove the container:
 
-```powershell
+```cmd
 docker rm my-game
 ```
 
 Remove the image:
 
-```powershell
+```cmd
 docker rmi linux-runner-game
 ```
 
----
+-----
